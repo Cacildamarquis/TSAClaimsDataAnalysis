@@ -22,32 +22,32 @@ This project explores and cleans data from the US Transportation Security Admini
 1.	Data Import
 Import CSV with PROC IMPORT, guess all rows for accuracy, and save it into a library.
 2.	Data Cleaning
-o	Standardize values and fill blanks/missing fields with "Unknown"
-o	Normalize text case (PROPCASE, UPCASE)
-o	Consolidate rare/invalid claim types and sites as "MOW" (miscellaneous or wrong)
+Standardize values and fill blanks/missing fields with "Unknown"
+Normalize text case (PROPCASE, UPCASE)
+Consolidate rare/invalid claim types and sites as "MOW" (miscellaneous or wrong)
 3.	Flagging Data Issues
-o	Flag records with date problems (e.g., future incident dates, out-of-range values)
-o	Label suspicious rows as 'Needs Review' in a new Date_Issues column
+Flag records with date problems (e.g., future incident dates, out-of-range values)
+Label suspicious rows as 'Needs Review' in a new Date_Issues column
 4.	Filtering and Sorting
-o	Create a clean subset excluding flagged rows
-o	Sort records by date
+Create a clean subset excluding flagged rows
+Sort records by date
 5.	State-Level Analysis
-o	Use a macro %run_state_freq() to automate report generation for any state (e.g., HI for Hawaii)
+Use a macro %run_state_freq() to automate report generation for any state (e.g., HI for Hawaii)
 
 # Outputs
 •	Total rows with date issues
 •	Frequency of claims by year
 •	Per-state breakdown of:
-o	Claim Type
-o	Claim Site
-o	Disposition
-o	Total and average close amount
+Claim Type
+Claim Site
+Disposition
+Total and average close amount
 
 # Example Report Snippets
 •	HI (Hawaii):
-o	Most common claim type: Passenger Property Loss
-o	Highest close amount in a single claim: $3500
-o	Total claims after filtering: 48
+Most common claim type: Passenger Property Loss
+Highest close amount in a single claim: $3500
+Total claims after filtering: 48
 
 # How to Run
 If you're using SAS OnDemand for Academics:
